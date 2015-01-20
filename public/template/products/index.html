@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Products<a class="label label-primary pull-right" href="#/products/new">Create a
+            product</a></div>
+        <!-- Table -->
+        <table class="table table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-hide="products.length">
+                <td colspan="5">No Product found, Please create one.</td>
+            </tr>
+            <tr ng-show="products.length" ng-repeat="product in products">
+                <td><a href="#/products/{{product.id}}">{{product.name}}</a></td>
+                <td>{{product.price}}</td>
+                <td>{{product.description}}</td>
+                <td>
+                    <a href="#/products/{{product.id}}/edit"><i class="fa fa-pencil-square-o"></i></a> | <a href="" class="fa  fa-minus-circle "></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
