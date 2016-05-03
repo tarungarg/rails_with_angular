@@ -19,7 +19,7 @@
                 <td>{{product.price}}</td>
                 <td>{{product.description}}</td>
                 <td>
-                    <a href="#/products/{{product.id}}/edit"><i class="fa fa-pencil-square-o"></i></a> | <a href="" class="fa  fa-minus-circle "></i></a>
+                    <a href="#/products/{{product.id}}/edit"><i class="fa fa-pencil-square-o"></i></a> | <a ng-click="deleteProduct(product.id)" class="fa  fa-minus-circle "></i></a>
                 </td>
             </tr>
         </table>
